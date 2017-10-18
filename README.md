@@ -1,4 +1,4 @@
-# BTFW6
+# BTFW7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
@@ -25,14 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-ng build --target=production --base-href '/' --aot --build-optimizer
-
-ng build --target=development --base-href '/' --aot --build-optimizer
-
-ng new Projectname  -> create new project
-
-ng g module btfw  ->  create a module name as "btfw"
-
-ng g component FrameworkBody --prefix=false --spec=false --skip-import=true  -> generate a component not using the "app" prefix, no spec file , and will not add an import script in module 
-
