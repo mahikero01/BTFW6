@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FrameworkConfigService } from '../services/framework-config.service';
+import { ScreenService } from '../services/screen.service';
 
 @Component({
   selector: 'btfw-title-bar',
@@ -9,7 +10,8 @@ import { FrameworkConfigService } from '../services/framework-config.service';
 })
 export class TitleBarComponent implements OnInit {
 
-  constructor(private frameworkConfigService: FrameworkConfigService) { }
+  constructor(private frameworkConfigService: FrameworkConfigService,
+      private screenService: ScreenService) { }
 
   ngOnInit() {
   }

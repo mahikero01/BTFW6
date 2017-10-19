@@ -8,6 +8,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 
 import { FrameworkConfigService } from './services/framework-config.service';
+import{ ScreenService } from './services/screen.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { FrameworkConfigService } from './services/framework-config.service';
     StatusBarComponent
   ],
   providers: [
-    FrameworkConfigService
+    FrameworkConfigService,
+    ScreenService
   ],
   exports: [
     FrameworkBodyComponent

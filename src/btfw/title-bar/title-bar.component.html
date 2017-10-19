@@ -1,5 +1,13 @@
-<div class="title-bar">
-  <span>{{ frameworkConfigService.applicationTitle }}</span>
+<div *ngIf="!screenService.isLarge()" class="title-bar-small">
+    <span class="glyphicon glyphicon-menu-hamburger icon-format"></span>
+    <div class="small-app-name-holder">
+      <span class="small-app-name">{{ frameworkConfigService.applicationTitle }}</span>
+    </div>
+    <span class="glyphicon glyphicon-option-vertical icon-format"></span>>
+  </div>
+
+<div *ngIf="screenService.isLarge()" class="title-bar">
+  <span class="app-name">{{ frameworkConfigService.applicationTitle }}</span>
   <div class="menu-area">
     <btfw-top-bar></btfw-top-bar>
     <!--menu-->
