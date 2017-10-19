@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { FrameworkConfigService } from '../services/framework-config.service';
 
 @Component({
-  selector: 'btfw-title-bar',
-  templateUrl: './title-bar.component.html',
-  styleUrls: ['./title-bar.component.css']
+  selector: 'btfw-top-bar',
+  templateUrl: './top-bar.component.html',
+  styleUrls: ['./top-bar.component.css']
 })
-export class TitleBarComponent implements OnInit {
+export class TopBarComponent implements OnInit {
 
   constructor(private frameworkConfigService: FrameworkConfigService) { }
 
