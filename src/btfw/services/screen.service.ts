@@ -7,12 +7,12 @@ export class ScreenService {
     resize$ = this.resizeSource.asObservable();
 
     largeBreakpoint = 800;
-    screeenWidth = 1000;
+    screenWidth = 1000;
     screenHeight = 800;
 
     constructor() {
         try {
-            this.screeenWidth = window.innerWidth;
+            this.screenWidth = window.innerWidth;
             this.screenHeight = window.innerHeight;
             window.addEventListener('resize', (event) => this.onResize(event));
         }
@@ -22,11 +22,11 @@ export class ScreenService {
     }
 
     isLarge() : boolean {
-        return this.screeenWidth >= this.largeBreakpoint;
+        return this.screenWidth >= this.largeBreakpoint;
     }
 
     onResize($event) : void {
-        this.screeenWidth = window.innerWidth;
+        this.screenWidth = window.innerWidth;
         this.screenHeight = window.innerHeight;
         this.resizeSource.next();
     }
