@@ -8,9 +8,12 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ScreenLarge } from './directives/screen-large.directive';
 import { ScreenBelowLarge } from './directives/screen-below-large.directive';
+import { MenuComponent } from './menus/menu/menu.component';
+import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 
 import { FrameworkConfigService } from './services/framework-config.service';
-import{ ScreenService } from './services/screen.service';
+import { ScreenService } from './services/screen.service';
+import { MenuService } from './services/menu.service';
 
 @NgModule({
   imports: [
@@ -23,11 +26,14 @@ import{ ScreenService } from './services/screen.service';
     TopBarComponent,
     StatusBarComponent,
     ScreenLarge,
-    ScreenBelowLarge
+    ScreenBelowLarge,
+    MenuComponent,
+    MenuItemComponent
   ],
   providers: [
     FrameworkConfigService,
-    ScreenService
+    ScreenService,
+    MenuService
   ],
   exports: [
     FrameworkBodyComponent
