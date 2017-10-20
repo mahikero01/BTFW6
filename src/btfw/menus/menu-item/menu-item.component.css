@@ -2,7 +2,7 @@
     display: inline-block;
     position: relative;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 3px;
     margin-bottom: 0;
     padding: 0;
     font-size: 14px;
@@ -14,7 +14,7 @@
 }
 
 :host:not(.parent-is-popup) {
-    margin-left: 16px;
+    margin-left: 5px;
     width: auto;
 }
 
@@ -34,5 +34,9 @@ span {
 }
 
 .menu-item:hover {
+    background-color: #35597D;
+}
+
+.router-link-active {
     background-color: #35597D;
 }
