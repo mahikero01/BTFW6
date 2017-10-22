@@ -11,6 +11,7 @@ import { ScreenLarge } from './directives/screen-large.directive';
 import { ScreenBelowLarge } from './directives/screen-below-large.directive';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
+import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 
 import { FrameworkConfigService } from './services/framework-config.service';
 import { ScreenService } from './services/screen.service';
@@ -30,7 +31,8 @@ import { MenuService } from './services/menu.service';
     ScreenLarge,
     ScreenBelowLarge,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    PopupMenuComponent
   ],
   providers: [
     FrameworkConfigService,

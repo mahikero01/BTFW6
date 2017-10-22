@@ -30,8 +30,34 @@ export class AppComponent {
       {
         text: 'Search',
         icon: 'fa-search',
-        route: '/search',
-        submenu: null
+        route: null,
+        submenu: [
+          {
+            text: 'Show Result',
+            icon: 'fa-cogs',
+            route: 'show-search',
+            submenu: null
+          },
+          {
+            text: 'Export Result',
+            icon: 'fa-cogs',
+            route: null,
+            submenu: [
+              {
+                text: 'In PDF',
+                icon: 'fa-cogs',
+                route: 'pdf-export',
+                submenu: null
+              },
+              {
+                text: 'In Excel',
+                icon: 'fa-cogs',
+                route: 'excel-export',
+                submenu: null
+              }
+            ]
+          }
+        ]
       },
       {
         text: 'Skillset',
@@ -42,8 +68,27 @@ export class AppComponent {
       {
         text: 'Maintenance',
         icon: 'fa-wrench',
-        route: '/maintenance',
-        submenu: null
+        route: null,
+        submenu: [
+          {
+            text: 'Location List',
+            icon: 'fa-cogs',
+            route: 'location-maint',
+            submenu: null
+          },
+          {
+            text: 'Department List',
+            icon: 'fa-cogs',
+            route: 'department-maint',
+            submenu: null
+          },
+          {
+            text: 'Skill List',
+            icon: 'fa-cogs',
+            route: 'skill-maint',
+            submenu: null
+          }
+        ]
       }
     ];
 
