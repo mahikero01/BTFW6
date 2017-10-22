@@ -1,7 +1,8 @@
 <nav>
   <ul>
     <li *ngFor="let item of menuService.items">
-      <btfw-menu-item [item]="item">
+      <btfw-menu-item [item]="item" 
+          [ngClass]="{'vertical-menu': menuService.isVertical}">
       </btfw-menu-item>
     </li>
   </ul>
