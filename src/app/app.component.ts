@@ -62,7 +62,7 @@ export class AppComponent {
       {
         text: 'Skillset',
         icon: 'fa-cogs',
-        route: '/skillset',
+        route: 'skillset',
         submenu: null
       },
       {

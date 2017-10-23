@@ -3,9 +3,18 @@ import {
   OnInit, 
   Input,
   HostBinding,
-  HostListener
+  HostListener,
+  ElementRef,
+  Renderer,
+  trigger,
+  transition,
+  style,
+  animate
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { 
+  Router, 
+  NavigationEnd 
+} from '@angular/router';
 
 import { 
   MenuItem,
@@ -14,7 +23,18 @@ import {
 @Component({
   selector: 'btfw-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.css']
+  styleUrls: ['./menu-item.component.css'],
+  animations: [
+    trigger('visibilityChanged', [
+        transition(':enter', [   // :enter is alias to 'void => *'
+            style({opacity:0}),
+            animate(500, style({opacity:1})) 
+        ]),
+        transition(':leave', [   // :leave is alias to '* => void'
+            animate(500, style({opacity:0})) 
+        ])
+    ])
+  ]
 })
 export class MenuItemComponent implements OnInit {
   @Input() item = <MenuItem>null; //see angular-cli issue #2034
@@ -29,9 +49,42 @@ export class MenuItemComponent implements OnInit {
 
   constructor(
       private menuService: MenuService,
-      private router: Router) { }
+      private router: Router,
+      private el: ElementRef,
+      private renderer: Renderer) { }
 
-  ngOnInit() {
+  checkActiveRoute(route: string) {
+    this.isActiveRoute = (route == '/' + this.item.route);
+  } 
+
+  ngOnInit() : void {
+    this.checkActiveRoute(this.router.url);
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.checkActiveRoute(event.url);
+        console.log(event.url + ' ' + this.item.route + ' ' + this.isActiveRoute);
+      }
+    });
+  }
+
+  @HostListener('click', ['$event'])
+  onClick() : void {
+    event.stopPropagation();
+
+    if (this.item.submenu) {
+      if (this.menuService.isVertical) {
+        this.mouseInPopup = !this.mouseInPopup;
+      }
+    }
+    else if (this.item.route) {
+      let newEvent = new MouseEvent('mouseleave', {bubbles: true});
+      this.renderer.invokeElementMethod(
+        this.el.nativeElement, 'dispatchEvent', [newEvent]
+      );
+
+      this.router.navigate(['/' + this.item.route]);
+    }
   }
 
   onPopupMouseEnter(event) : void {

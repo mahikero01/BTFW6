@@ -4,17 +4,26 @@ import { BtfwModule } from '../btfw/btfw.module';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
+import { ShowresultComponent } from './search/showresult/showresult.component';
 import { SkillsetComponent } from './skillset/skillset.component';
-import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { appRoutes } from './app.routing';
+import { LocationComponent } from './maintenance/location/location.component';
+import { DepartmentComponent } from './maintenance/department/department.component';
+import { SkillsetmComponent } from './maintenance/skillsetm/skillsetm.component';
+import { ExportpdfComponent } from './search/export/exportpdf/exportpdf.component';
+import { ExportexcelComponent } from './search/export/exportexcel/exportexcel.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
+    ShowresultComponent,
     SkillsetComponent,
-    MaintenanceComponent
+    LocationComponent,
+    DepartmentComponent,
+    SkillsetmComponent,
+    ExportpdfComponent,
+    ExportexcelComponent
   ],
   imports: [
     BrowserModule,
