@@ -89,7 +89,13 @@ export class AppComponent {
             submenu: null
           }
         ]
-      }
+      },
+      {
+        text: 'Admin',
+        icon: 'fa-cogs',
+        route: 'admin',
+        submenu: null
+      },
     ];
 
     menuService.items = initialMenuItem;

@@ -7,6 +7,7 @@ import { SkillsetComponent } from './skillset/skillset.component';
 import { LocationComponent } from './maintenance/location/location.component';
 import { DepartmentComponent } from './maintenance/department/department.component';
 import { SkillsetmComponent } from './maintenance/skillsetm/skillsetm.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const appRoutes: Routes = [
     { path: 'show-search', component: ShowresultComponent },
@@ -16,6 +17,7 @@ export const appRoutes: Routes = [
     { path: 'location-maint', component: LocationComponent},
     { path: 'department-maint', component: DepartmentComponent},
     { path: 'skill-maint', component: SkillsetmComponent},
+    { path: 'admin',  component: AdminComponent },
     { path: '', component: SkillsetComponent },
     { path: '**', component: SkillsetComponent }
 ];

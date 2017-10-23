@@ -12,6 +12,7 @@ import { DepartmentComponent } from './maintenance/department/department.compone
 import { SkillsetmComponent } from './maintenance/skillsetm/skillsetm.component';
 import { ExportpdfComponent } from './search/export/exportpdf/exportpdf.component';
 import { ExportexcelComponent } from './search/export/exportexcel/exportexcel.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ExportexcelComponent } from './search/export/exportexcel/exportexcel.co
     DepartmentComponent,
     SkillsetmComponent,
     ExportpdfComponent,
-    ExportexcelComponent
+    ExportexcelComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
