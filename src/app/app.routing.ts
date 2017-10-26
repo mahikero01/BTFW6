@@ -10,6 +10,7 @@ import { SkillsetmComponent } from './maintenance/skillsetm/skillsetm.component'
 import { AdminComponent } from './admin/admin.component';
 
 export const appRoutes: Routes = [
+    { path: 'noaccess', component:NoAccess },
     { path: 'show-search', component: ShowresultComponent },
     { path: 'pdf-export', component: ExportpdfComponent },
     { path: 'excel-export', component: ExportexcelComponent },
