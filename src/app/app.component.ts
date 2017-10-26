@@ -39,7 +39,7 @@ export class AppComponent {
             submenu: null
           },
           {
-            text: 'Export Result',
+            text: 'import Result',
             icon: 'fa-cogs',
             route: null,
             submenu: [
