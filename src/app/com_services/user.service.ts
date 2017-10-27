@@ -10,8 +10,13 @@ export class UserService implements UserApi {
 
     constructor() {}
 
-    signIn(username: string, role: string) : Observable<any> {
+    // signIn(username: string, role: string) : Observable<any> {
+    //     this.isAuthenticated = true;
+    //     return Observable.of({});
+    // }
+
+    signIn(username: string, role: string) : string {
         this.isAuthenticated = true;
-        return Observable.of({});
+        return "yes";
     }
 }

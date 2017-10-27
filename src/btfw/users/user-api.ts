@@ -2,5 +2,6 @@
 import { Observable } from 'rxjs/Observable';
 
 export abstract class UserApi {
-    signIn: (username: string, role: string) => Observable<any>;
+    //signIn: (username: string, role: string) => Observable<any>;
+    signIn: (username: string, role: string) => string;
 }

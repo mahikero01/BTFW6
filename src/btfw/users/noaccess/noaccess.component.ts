@@ -17,8 +17,17 @@ export class NoaccessComponent implements OnInit {
   }
 
   enterNow() {
-    this.userApi.signIn("sarmife", "admin")
-    .subscribe(() => {this.router.navigate(['admin-access'])});
+    // this.userApi.signIn("sarmife", "admin")
+    // .subscribe((data) => {
+    //   console.log('got valid: ', data)
+    //   this.router.navigate(['admin-access']);
+    // });
+
+    let inputNow = this.userApi.signIn("sarmife", "admin");
+
+    if (inputNow == "es") {
+      this.router.navigate(['admin-access'])
+    }
   }
 
 }
