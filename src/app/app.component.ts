@@ -35,7 +35,7 @@ export class AppComponent {
           {
             text: 'Show Result',
             icon: 'fa-cogs',
-            route: 'show-search',
+            route: 'admin-access/show-search',
             submenu: null
           },
           {
@@ -46,13 +46,13 @@ export class AppComponent {
               {
                 text: 'In PDF',
                 icon: 'fa-cogs',
-                route: 'pdf-export',
+                route: 'admin-access/pdf-export',
                 submenu: null
               },
               {
                 text: 'In Excel',
                 icon: 'fa-cogs',
-                route: 'excel-export',
+                route: 'admin-access/excel-export',
                 submenu: null
               }
             ]
@@ -62,7 +62,7 @@ export class AppComponent {
       {
         text: 'Skillset',
         icon: 'fa-cogs',
-        route: 'skillset',
+        route: 'admin-access/skillset',
         submenu: null
       },
       {
@@ -73,19 +73,19 @@ export class AppComponent {
           {
             text: 'Location List',
             icon: 'fa-cogs',
-            route: 'location-maint',
+            route: 'admin-access/location-maint',
             submenu: null
           },
           {
             text: 'Department List',
             icon: 'fa-cogs',
-            route: 'department-maint',
+            route: 'admin-access/department-maint',
             submenu: null
           },
           {
             text: 'Skill List',
             icon: 'fa-cogs',
-            route: 'skill-maint',
+            route: 'admin-access/skill-maint',
             submenu: null
           }
         ]
@@ -93,7 +93,7 @@ export class AppComponent {
       {
         text: 'Admin',
         icon: 'fa-cogs',
-        route: 'admin',
+        route: 'admin-access/admin',
         submenu: null
       },
     ];

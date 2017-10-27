@@ -12,6 +12,7 @@ import { ScreenBelowLarge } from './directives/screen-below-large.directive';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
+import { NoaccessComponent } from './users/noaccess/noaccess.component';
 
 import { FrameworkConfigService } from './services/framework-config.service';
 import { ScreenService } from './services/screen.service';
@@ -32,7 +33,8 @@ import { MenuService } from './services/menu.service';
     ScreenBelowLarge,
     MenuComponent,
     MenuItemComponent,
-    PopupMenuComponent
+    PopupMenuComponent,
+    NoaccessComponent
   ],
   providers: [
     FrameworkConfigService,

@@ -13,7 +13,11 @@ import { SkillsetmComponent } from './maintenance/skillsetm/skillsetm.component'
 import { ExportpdfComponent } from './search/export/exportpdf/exportpdf.component';
 import { ExportexcelComponent } from './search/export/exportexcel/exportexcel.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminaccessComponent } from './adminaccess/adminaccess.component';
 
+import { UserService } from './com_services/user.service';
+import { UserApi } from '../btfw/users/user-api';
+import { AuthGuard } from './com_services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,19 @@ import { AdminComponent } from './admin/admin.component';
     SkillsetmComponent,
     ExportpdfComponent,
     ExportexcelComponent,
-    AdminComponent
+    AdminComponent,
+    AdminaccessComponent
   ],
   imports: [
     BrowserModule,
     BtfwModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    UserService,
+    { provide: UserApi, useExisting: UserService },
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
