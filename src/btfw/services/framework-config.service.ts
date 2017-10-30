@@ -8,7 +8,7 @@ export interface FrameworkConfigSettings {
 @Injectable()
 export class FrameworkConfigService {
   applicationTitle = 'Put App Name in Config';
-  currentUserLog = 'Unknow User';
+  currentUserLog = 'Unknow User'; 
 
   configure(settings: FrameworkConfigSettings) : void {
     Object.assign(this, settings)

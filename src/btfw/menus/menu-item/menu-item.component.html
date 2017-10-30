@@ -1,4 +1,5 @@
-<div 
+<div
+        [hidden]="!item.visible" 
         class="menu-item" 
         [ngClass]="{'vertical-menu': menuService.isVertical, 'router-link-active': isActiveRoute}">
         <!--  Use this only if there will be no pop up menu
@@ -20,7 +21,7 @@
             class="glyphicon glyphicon-menu-down"></span> 
 </div>
 
-<btfw-popup-menu 
+<btfw-popup-menu [hidden]="!item.visible" 
     *ngIf="mouseInPopup || mouseInItem"
     [menu]='item.submenu'
     [ngClass]="{'vertical-menu': menuService.isVertical}"

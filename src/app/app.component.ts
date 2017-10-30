@@ -21,7 +21,7 @@ export class AppComponent {
       private menuService: MenuService) {
     let config: FrameworkConfigSettings = {
       applicationTitle: 'Skillset Database',
-      currentUserLog: 'sarmife'
+      currentUserLog: 'sarmife' //API for current user should be here
     };
 
     frameworkConfigService.configure(config);
@@ -31,28 +31,33 @@ export class AppComponent {
         text: 'Search',
         icon: 'fa-search',
         route: null,
+        visible: true,
         submenu: [
           {
             text: 'Show Result',
             icon: 'fa-cogs',
             route: 'admin-access/show-search',
+            visible: true,
             submenu: null
           },
           {
             text: 'import Result',
             icon: 'fa-cogs',
             route: null,
+            visible: true,
             submenu: [
               {
                 text: 'In PDF',
                 icon: 'fa-cogs',
                 route: 'admin-access/pdf-export',
+                visible: true,
                 submenu: null
               },
               {
                 text: 'In Excel',
                 icon: 'fa-cogs',
                 route: 'admin-access/excel-export',
+                visible: true,
                 submenu: null
               }
             ]
@@ -63,29 +68,34 @@ export class AppComponent {
         text: 'Skillset',
         icon: 'fa-cogs',
         route: 'admin-access/skillset',
+        visible: true,
         submenu: null
       },
       {
         text: 'Maintenance',
         icon: 'fa-wrench',
         route: null,
+        visible: true,
         submenu: [
           {
             text: 'Location List',
             icon: 'fa-cogs',
             route: 'admin-access/location-maint',
+            visible: true,
             submenu: null
           },
           {
             text: 'Department List',
             icon: 'fa-cogs',
             route: 'admin-access/department-maint',
+            visible: true,
             submenu: null
           },
           {
             text: 'Skill List',
             icon: 'fa-cogs',
             route: 'admin-access/skill-maint',
+            visible: true,
             submenu: null
           }
         ]
@@ -94,6 +104,7 @@ export class AppComponent {
         text: 'Admin',
         icon: 'fa-cogs',
         route: 'admin-access/admin',
+        visible: true,
         submenu: null
       },
     ];

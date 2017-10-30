@@ -5,7 +5,7 @@ import { UserService } from './user.service';
 
 
 @Injectable()
-export class AuthGuard implements CanActivate, CanActivateChild{
+export class AdmGuard implements CanActivate, CanActivateChild{
     constructor (private userService: UserService, private router: Router) {}
 
     canActivate() : boolean {
@@ -16,6 +16,6 @@ export class AuthGuard implements CanActivate, CanActivateChild{
     }
 
     canActivateChild() : boolean {
-        return  this.canActivate();
+        return  true;
     }
 }

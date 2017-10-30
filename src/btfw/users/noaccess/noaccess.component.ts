@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserApi } from '../user-api';
+import { FrameworkConfigService } from '../../services/framework-config.service';
 
 @Component({
   selector: 'btfw-noaccess',
@@ -10,7 +11,8 @@ import { UserApi } from '../user-api';
 })
 export class NoaccessComponent implements OnInit {
 
-  constructor(private userApi: UserApi, private router: Router) { }
+  constructor(private userApi: UserApi, private router: Router, 
+      private frameworkConfig: FrameworkConfigService) { }
 
   ngOnInit() {
     
@@ -23,9 +25,9 @@ export class NoaccessComponent implements OnInit {
     //   this.router.navigate(['admin-access']);
     // });
 
-    let inputNow = this.userApi.signIn("sarmife", "admin");
+    let inputNow = this.userApi.signIn(this.frameworkConfig.currentUserLog);
 
-    if (inputNow == "es") {
+    if (inputNow) {
       this.router.navigate(['admin-access'])
     }
   }

@@ -18,6 +18,7 @@ import { AdminaccessComponent } from './adminaccess/adminaccess.component';
 import { UserService } from './com_services/user.service';
 import { UserApi } from '../btfw/users/user-api';
 import { AuthGuard } from './com_services/auth-guard.service';
+import { AdmGuard } from './com_services/adm-guard.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AuthGuard } from './com_services/auth-guard.service';
   providers: [
     UserService,
     { provide: UserApi, useExisting: UserService },
-    AuthGuard
+    AuthGuard,
+    AdmGuard
   ],
   bootstrap: [AppComponent]
 })

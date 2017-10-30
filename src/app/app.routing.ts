@@ -12,6 +12,7 @@ import { SkillsetmComponent } from './maintenance/skillsetm/skillsetm.component'
 import { AdminComponent } from './admin/admin.component';
 
 import { AuthGuard } from './com_services/auth-guard.service';
+import { AdmGuard } from './com_services/adm-guard.service';
 
 export const appRoutes: Routes = [
     { path: 'no-access', component: NoaccessComponent },
@@ -26,9 +27,15 @@ export const appRoutes: Routes = [
                 { path: 'location-maint', component: LocationComponent},
                 { path: 'department-maint', component: DepartmentComponent},
                 { path: 'skill-maint', component: SkillsetmComponent},
-                { path: 'admin',  component: AdminComponent },
+                
             ]
-        }
+        },
+        { path: '', canActivateChild: [AdmGuard],
+        children: [
+            
+            { path: 'admin',  component: AdminComponent },
+        ]
+    }
     ]},
     { path: '', component: NoaccessComponent },
     { path: '**', component: NoaccessComponent }
