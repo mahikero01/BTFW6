@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exportexcel.component.css']
 })
 export class ExportexcelComponent implements OnInit {
-
+  public testResult = true && true || 'heello';
   constructor() { }
 
   ngOnInit() {
