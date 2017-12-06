@@ -48,7 +48,7 @@ export class MenuItemComponent implements OnInit {
   popupTop = 34;
 
   constructor(
-      private menuService: MenuService,
+      public menuService: MenuService,
       private router: Router,
       private el: ElementRef,
       private renderer: Renderer) { }
